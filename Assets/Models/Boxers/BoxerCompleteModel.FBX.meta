@@ -1,0 +1,187 @@
+fileFormatVersion: 2
+guid: c0af80c50c934fd409e50ad6940129c0
+timeCreated: 1459895760
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Body
+    100002: Boots
+    100004: Boots2
+    100006: //RootNode
+    100008: BustN
+    100010: Clothes
+    100012: Gloves
+    100014: Gloves2
+    100016: Hair
+    100018: Hat
+    100020: HeadN
+    100022: HipN
+    100024: L1stNa
+    100026: L1stNb
+    100028: LArmJ
+    100030: Legs
+    100032: Legs2
+    100034: LFootN
+    100036: LHandN
+    100038: LHaveN
+    100040: LKneeJ
+    100042: LLegN
+    100044: LPantJ
+    100046: LShoulderJ
+    100048: LShoulderN
+    100050: LThumbNa
+    100052: LThumbNb
+    100054: LToeN
+    100056: NeckN
+    100058: Particle View 001
+    100060: R1stNa
+    100062: R1stNb
+    100064: RArmJ
+    100066: RFootN
+    100068: RHandN
+    100070: RHaveN
+    100072: RKneeJ
+    100074: RLegN
+    100076: RPantJ
+    100078: RShoulderJ
+    100080: RShoulderN
+    100082: RThumbNa
+    100084: RThumbNb
+    100086: RToeN
+    100088: TopN
+    100090: TransN
+    100092: WaistN
+    400000: Body
+    400002: Boots
+    400004: Boots2
+    400006: //RootNode
+    400008: BustN
+    400010: Clothes
+    400012: Gloves
+    400014: Gloves2
+    400016: Hair
+    400018: Hat
+    400020: HeadN
+    400022: HipN
+    400024: L1stNa
+    400026: L1stNb
+    400028: LArmJ
+    400030: Legs
+    400032: Legs2
+    400034: LFootN
+    400036: LHandN
+    400038: LHaveN
+    400040: LKneeJ
+    400042: LLegN
+    400044: LPantJ
+    400046: LShoulderJ
+    400048: LShoulderN
+    400050: LThumbNa
+    400052: LThumbNb
+    400054: LToeN
+    400056: NeckN
+    400058: Particle View 001
+    400060: R1stNa
+    400062: R1stNb
+    400064: RArmJ
+    400066: RFootN
+    400068: RHandN
+    400070: RHaveN
+    400072: RKneeJ
+    400074: RLegN
+    400076: RPantJ
+    400078: RShoulderJ
+    400080: RShoulderN
+    400082: RThumbNa
+    400084: RThumbNb
+    400086: RToeN
+    400088: TopN
+    400090: TransN
+    400092: WaistN
+    4300000: Body
+    4300002: Clothes
+    4300004: Boots
+    4300006: Gloves
+    4300008: Hair
+    4300010: Legs
+    4300012: Hat
+    4300014: Legs2
+    4300016: Boots2
+    4300018: Gloves2
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Body
+    13700002: Boots
+    13700004: Boots2
+    13700006: Clothes
+    13700008: Gloves
+    13700010: Gloves2
+    13700012: Hair
+    13700014: Hat
+    13700016: Legs
+    13700018: Legs2
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
