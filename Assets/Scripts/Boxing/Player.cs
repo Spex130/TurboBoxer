@@ -17,7 +17,7 @@ namespace Assets.Scripts.Boxing
 
         void Update()
         {
-            if (!animDone)
+            if ((actionSpeed += Time.deltaTime)<actionSpeedLimit)
                 return;
             if (hit)
             {

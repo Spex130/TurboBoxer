@@ -7,6 +7,8 @@ namespace Assets.Scripts.Boxing
         public Boxer enemy;
         public Animator anim;
         public bool animDone;
+        public float actionSpeedLimit = 1;
+        protected float actionSpeed = 1;
 
         protected enum State { middle, left, right };
         protected State state;
@@ -28,14 +30,30 @@ namespace Assets.Scripts.Boxing
 
         protected bool Attack()
         {
-            if (state == State.left || state == State.middle)
+            if (state == State.left) {
                 anim.SetBool("LeftPunchHi", true);
-            else
+                actionSpeed = 0;
+            }
+            else if (state == State.middle) {
+                if (Random.Range(1, 10)%2 == 0) //IF random number is even.
+                {
+                    anim.SetBool("LeftPunchLow", true);
+                    actionSpeed = 0;
+                }
+                else
+                {
+                    anim.SetBool("RightPunchLow", true);
+                    actionSpeed = 0;
+                }
+            }
+            else { 
                 anim.SetBool("RightPunchHi", true);
+                actionSpeed = 0;
+            }
+            if (enemy.blocking && state == State.middle)
+                return false;
             if (state == enemy.state)
             {
-                if (enemy.blocking && state == State.middle)
-                    return false;
                 enemy.Hit();
                 return true;
             }
@@ -47,13 +65,13 @@ namespace Assets.Scripts.Boxing
         {
             hit = true;
             anim.SetBool("Hit", true);
-            animDone = false;
+            actionSpeed = 0;
         }
 
         protected void Block()
         {
             anim.SetBool("BlockHit", true);
-            animDone = false;
+            actionSpeed = 0;
         }
 
         protected void Dodge(State state)
@@ -62,7 +80,7 @@ namespace Assets.Scripts.Boxing
                 anim.SetBool("DodgeLeft", true);
             else
                 anim.SetBool("DodgeRight", true);
-            animDone = false;
+            actionSpeed = 0;
         }
     }
 }

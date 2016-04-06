@@ -9,5 +9,11 @@ namespace Assets.Scripts.Boxing
             state = State.middle;
             anim.SetBool("Wait", true);
         }
+
+        void Update()
+        {
+
+        }
+
     }
 }
