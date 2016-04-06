@@ -345,7 +345,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400196, guid: 4aaa89aca2c452d43aab93642a332501, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.38
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 400196, guid: 4aaa89aca2c452d43aab93642a332501, type: 3}
       propertyPath: m_LocalRotation.x
@@ -403,7 +403,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400196, guid: 4aaa89aca2c452d43aab93642a332501, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.6351522
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 400196, guid: 4aaa89aca2c452d43aab93642a332501, type: 3}
       propertyPath: m_LocalRotation.x
@@ -470,6 +470,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1317757620}
   anim: {fileID: 605064426}
+  animDone: 0
 --- !u!1 &630303707
 GameObject:
   m_ObjectHideFlags: 0
@@ -1270,6 +1271,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 605064427}
   anim: {fileID: 1317757619}
+  animDone: 0
 --- !u!1 &1418965265
 GameObject:
   m_ObjectHideFlags: 0
