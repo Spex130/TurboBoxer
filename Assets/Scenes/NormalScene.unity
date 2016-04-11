@@ -85,6 +85,10 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &102751421 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100120, guid: 4aaa89aca2c452d43aab93642a332501, type: 3}
+  m_PrefabInternal: {fileID: 605064424}
 --- !u!1 &137946541
 GameObject:
   m_ObjectHideFlags: 0
@@ -221,6 +225,14 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 207608788}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &253706551 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: 4aaa89aca2c452d43aab93642a332501, type: 3}
+  m_PrefabInternal: {fileID: 605064424}
+--- !u!1 &334874313 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100004, guid: 4aaa89aca2c452d43aab93642a332501, type: 3}
+  m_PrefabInternal: {fileID: 605064424}
 --- !u!1 &368480532
 GameObject:
   m_ObjectHideFlags: 0
@@ -443,7 +455,7 @@ Prefab:
       objectReference: {fileID: 9100000, guid: b6db1826e937eb84188d6165cf754e9e, type: 2}
     - target: {fileID: 100196, guid: 4aaa89aca2c452d43aab93642a332501, type: 3}
       propertyPath: m_Name
-      value: BoxerM (1)
+      value: CPU
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4aaa89aca2c452d43aab93642a332501, type: 3}
@@ -472,6 +484,39 @@ MonoBehaviour:
   anim: {fileID: 605064426}
   animDone: 0
   actionSpeedLimit: 1
+--- !u!114 &605064428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 605064425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fb66b4703c59c8448125a69e7c47af7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bodyMats:
+  - {fileID: 2100000, guid: 40a80d08b60836c48a2a440aa5cd893e, type: 2}
+  clotheMats:
+  - {fileID: 2100000, guid: cdc7cdbc5c3612d478f544fc6c38bc3f, type: 2}
+  gloveMats:
+  - {fileID: 2100000, guid: 5e44ece9a0c74f14cb1219224b353965, type: 2}
+  bootMats:
+  - {fileID: 2100000, guid: 96b53db719a9d6540934d9cc5b629975, type: 2}
+  bodys:
+  - {fileID: 253706551}
+  - {fileID: 706510083}
+  - {fileID: 1377745353}
+  - {fileID: 1050623671}
+  clothes:
+  - {fileID: 1876512760}
+  - {fileID: 102751421}
+  gloves:
+  - {fileID: 1468497232}
+  - {fileID: 957158239}
+  boots:
+  - {fileID: 1053486266}
+  - {fileID: 334874313}
 --- !u!1 &630303707
 GameObject:
   m_ObjectHideFlags: 0
@@ -662,6 +707,10 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 659046719}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &706510083 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100118, guid: 4aaa89aca2c452d43aab93642a332501, type: 3}
+  m_PrefabInternal: {fileID: 605064424}
 --- !u!1 &716904341
 GameObject:
   m_ObjectHideFlags: 0
@@ -964,6 +1013,10 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 842208976}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &957158239 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100116, guid: 4aaa89aca2c452d43aab93642a332501, type: 3}
+  m_PrefabInternal: {fileID: 605064424}
 --- !u!1 &972168328
 GameObject:
   m_ObjectHideFlags: 0
@@ -1070,6 +1123,14 @@ Transform:
   - {fileID: 1132810880}
   m_Father: {fileID: 758718982}
   m_RootOrder: 1
+--- !u!1 &1050623671 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100134, guid: 4aaa89aca2c452d43aab93642a332501, type: 3}
+  m_PrefabInternal: {fileID: 605064424}
+--- !u!1 &1053486266 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100002, guid: 4aaa89aca2c452d43aab93642a332501, type: 3}
+  m_PrefabInternal: {fileID: 605064424}
 --- !u!1 &1132810879
 GameObject:
   m_ObjectHideFlags: 0
@@ -1274,6 +1335,10 @@ MonoBehaviour:
   anim: {fileID: 1317757619}
   animDone: 0
   actionSpeedLimit: 0.3
+--- !u!1 &1377745353 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100132, guid: 4aaa89aca2c452d43aab93642a332501, type: 3}
+  m_PrefabInternal: {fileID: 605064424}
 --- !u!1 &1418965265
 GameObject:
   m_ObjectHideFlags: 0
@@ -1349,6 +1414,10 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1418965265}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1468497232 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100114, guid: 4aaa89aca2c452d43aab93642a332501, type: 3}
+  m_PrefabInternal: {fileID: 605064424}
 --- !u!1 &1481177197
 GameObject:
   m_ObjectHideFlags: 0
@@ -1530,6 +1599,10 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1855766933}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1876512760 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100112, guid: 4aaa89aca2c452d43aab93642a332501, type: 3}
+  m_PrefabInternal: {fileID: 605064424}
 --- !u!1 &1982748343
 GameObject:
   m_ObjectHideFlags: 0
