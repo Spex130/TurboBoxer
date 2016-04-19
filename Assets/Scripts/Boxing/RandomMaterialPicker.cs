@@ -24,7 +24,7 @@ namespace Assets.Scripts.Boxing
 
         private void setToRand(GameObject[] part, Material[] mats)
         {
-            int rand = Random.Range(0, mats.Length - 1);
+            int rand = Random.Range(0, mats.Length);
             foreach (GameObject g in part)
                 g.GetComponent<Renderer>().material = mats[rand];
         }

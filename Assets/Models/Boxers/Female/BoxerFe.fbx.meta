@@ -1,0 +1,201 @@
+fileFormatVersion: 2
+guid: 4eeef0452a49e2a4486124553c9fcf86
+timeCreated: 1461101819
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Body
+    100002: Boots
+    100004: Boots2
+    100006: //RootNode
+    100008: BustN
+    100010: Clothes
+    100012: Gloves
+    100014: Gloves2
+    100016: HairBot
+    100018: HairTop
+    100020: Hat
+    100022: HeadN
+    100024: HipN
+    100026: L1stNa
+    100028: L1stNb
+    100030: LArmJ
+    100032: Legs
+    100034: Legs2
+    100036: LFootN
+    100038: LHandN
+    100040: LHaveN
+    100042: LKneeJ
+    100044: LLegN
+    100046: LPantJ
+    100048: LShoulderJ
+    100050: LShoulderN
+    100052: LThumbNa
+    100054: LThumbNb
+    100056: LToeN
+    100058: NeckN
+    100060: Particle View 001
+    100062: Pony
+    100064: R1stNa
+    100066: R1stNb
+    100068: RArmJ
+    100070: RFootN
+    100072: RHandN
+    100074: RHaveN
+    100076: RKneeJ
+    100078: RLegN
+    100080: RPantJ
+    100082: RShoulderJ
+    100084: RShoulderN
+    100086: RThumbNa
+    100088: RThumbNb
+    100090: RToeN
+    100092: Scrunchie
+    100094: TopN
+    100096: TransN
+    100098: WaistN
+    400000: Body
+    400002: Boots
+    400004: Boots2
+    400006: //RootNode
+    400008: BustN
+    400010: Clothes
+    400012: Gloves
+    400014: Gloves2
+    400016: HairBot
+    400018: HairTop
+    400020: Hat
+    400022: HeadN
+    400024: HipN
+    400026: L1stNa
+    400028: L1stNb
+    400030: LArmJ
+    400032: Legs
+    400034: Legs2
+    400036: LFootN
+    400038: LHandN
+    400040: LHaveN
+    400042: LKneeJ
+    400044: LLegN
+    400046: LPantJ
+    400048: LShoulderJ
+    400050: LShoulderN
+    400052: LThumbNa
+    400054: LThumbNb
+    400056: LToeN
+    400058: NeckN
+    400060: Particle View 001
+    400062: Pony
+    400064: R1stNa
+    400066: R1stNb
+    400068: RArmJ
+    400070: RFootN
+    400072: RHandN
+    400074: RHaveN
+    400076: RKneeJ
+    400078: RLegN
+    400080: RPantJ
+    400082: RShoulderJ
+    400084: RShoulderN
+    400086: RThumbNa
+    400088: RThumbNb
+    400090: RToeN
+    400092: Scrunchie
+    400094: TopN
+    400096: TransN
+    400098: WaistN
+    2300000: Pony
+    2300002: Scrunchie
+    3300000: Pony
+    3300002: Scrunchie
+    4300000: Body
+    4300002: Clothes
+    4300004: Boots
+    4300006: Gloves
+    4300008: HairTop
+    4300010: Legs
+    4300012: Hat
+    4300014: Legs2
+    4300016: Boots2
+    4300018: Gloves2
+    4300020: HairBot
+    4300022: Pony
+    4300024: Scrunchie
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Body
+    13700002: Boots
+    13700004: Boots2
+    13700006: Clothes
+    13700008: Gloves
+    13700010: Gloves2
+    13700012: HairBot
+    13700014: HairTop
+    13700016: Hat
+    13700018: Legs
+    13700020: Legs2
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
