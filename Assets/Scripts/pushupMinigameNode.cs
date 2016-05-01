@@ -25,9 +25,6 @@ public class pushupMinigameNode : MonoBehaviour {
     public float sliderTrackpoint = 0;//This is used to place the progress of the slider.
     private int inverter = 1;//We use this to influence which direction the sliderTrackpoint is moving.
 
-    //NOTE: To stop -
-    //animation["MyAnimation"].time = 5.0; animation["MyAnimation"].speed = 0.0; animation.Play("MyAnimation"); 
-
     // Use this for initialization
     void Start () {
         init();
@@ -93,4 +90,12 @@ public class pushupMinigameNode : MonoBehaviour {
 	void Update () {
         gameLoop();
 	}
+
+    public void inputCheck()
+    {
+        if (sliderTrackpoint < frameThres && sliderTrackpoint > -frameThres)
+        {
+
+        }
+    }
 }
