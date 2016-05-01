@@ -1512,14 +1512,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 0}
-  anim: {fileID: 0}
+  anim: {fileID: 9512770}
   animDone: 0
   canMove: 1
-  actionSpeedLimit: 0.3
+  actionSpeedLimit: 0.4
   state: 0
   health: 15
   tiltRep: 0
   isMale: 0
+  shouldWait: 0
 --- !u!114 &11484582
 MonoBehaviour:
   m_ObjectHideFlags: 1

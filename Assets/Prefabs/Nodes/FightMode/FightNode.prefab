@@ -2983,7 +2983,11 @@ MonoBehaviour:
   playerPos: {fileID: 149352}
   camPos: {fileID: 137190}
   camPro: 1
-  nextNodeArray: []
+  isTrueLoad: 0
+  sceneLoadName: Title
+  nextNodeArray:
+  - {fileID: 11424226, guid: b1ebf71c43c4bef4ab15fe21445f9b8c, type: 2}
+  - {fileID: 11493990, guid: 7c46fc1f8a537ee479a82e33817fb5ab, type: 2}
 --- !u!114 &11449652
 MonoBehaviour:
   m_ObjectHideFlags: 1

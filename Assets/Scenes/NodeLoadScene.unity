@@ -124,14 +124,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 11463140, guid: 5cf4045a1ed91884fba6d9b3ff85df4b, type: 2}
-      propertyPath: player
+    - target: {fileID: 22396390, guid: 5cf4045a1ed91884fba6d9b3ff85df4b, type: 2}
+      propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 2022562659}
-    - target: {fileID: 11463140, guid: 5cf4045a1ed91884fba6d9b3ff85df4b, type: 2}
-      propertyPath: playercolor
-      value: 
-      objectReference: {fileID: 1188295715}
+      objectReference: {fileID: 903361926}
     - target: {fileID: 11449770, guid: 5cf4045a1ed91884fba6d9b3ff85df4b, type: 2}
       propertyPath: player
       value: 
@@ -148,10 +144,14 @@ Prefab:
       propertyPath: genderList.Array.data[1]
       value: 
       objectReference: {fileID: 739125840}
-    - target: {fileID: 22396390, guid: 5cf4045a1ed91884fba6d9b3ff85df4b, type: 2}
-      propertyPath: m_Camera
+    - target: {fileID: 11463140, guid: 5cf4045a1ed91884fba6d9b3ff85df4b, type: 2}
+      propertyPath: player
       value: 
-      objectReference: {fileID: 903361926}
+      objectReference: {fileID: 2022562659}
+    - target: {fileID: 11463140, guid: 5cf4045a1ed91884fba6d9b3ff85df4b, type: 2}
+      propertyPath: playercolor
+      value: 
+      objectReference: {fileID: 1188295715}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5cf4045a1ed91884fba6d9b3ff85df4b, type: 2}
   m_IsPrefabParent: 0
@@ -479,18 +479,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 11415844, guid: e573d03887e17494c8378933b647e503, type: 2}
-      propertyPath: anim
-      value: 
-      objectReference: {fileID: 2022562658}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e573d03887e17494c8378933b647e503, type: 2}
   m_IsPrefabParent: 0
---- !u!95 &2022562658 stripped
-Animator:
-  m_PrefabParentObject: {fileID: 9508686, guid: ef3d299a97ba7ae45abb24f11e531727,
-    type: 2}
-  m_PrefabInternal: {fileID: 1188295713}
 --- !u!114 &2022562659 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11455124, guid: ef3d299a97ba7ae45abb24f11e531727,

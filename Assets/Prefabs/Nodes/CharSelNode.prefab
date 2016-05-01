@@ -270,6 +270,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &120874
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 457630}
+  m_Layer: 0
+  m_Name: CameraPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &121404
 GameObject:
   m_ObjectHideFlags: 1
@@ -589,6 +604,21 @@ GameObject:
   - 114: {fileID: 11419806}
   m_Layer: 5
   m_Name: Arrow
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &152544
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 473282}
+  m_Layer: 0
+  m_Name: PLayerPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1250,8 +1280,22 @@ Transform:
   m_Children:
   - {fileID: 22434586}
   - {fileID: 468452}
+  - {fileID: 473282}
+  - {fileID: 457630}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!4 &457630
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 120874}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 403882}
+  m_RootOrder: 3
 --- !u!4 &468452
 Transform:
   m_ObjectHideFlags: 1
@@ -1264,6 +1308,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 403882}
   m_RootOrder: 1
+--- !u!4 &473282
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 152544}
+  m_LocalRotation: {x: 0, y: -0.9063079, z: 0, w: 0.42261818}
+  m_LocalPosition: {x: 1.29, y: 0.16, z: -7.31}
+  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_Children: []
+  m_Father: {fileID: 403882}
+  m_RootOrder: 2
 --- !u!108 &10837434
 Light:
   m_ObjectHideFlags: 1
@@ -3716,8 +3772,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isStartingNode: 1
-  playerPos: {fileID: 0}
-  camPos: {fileID: 0}
+  playerPos: {fileID: 152544}
+  camPos: {fileID: 120874}
   camPro: 0
   nextNodeArray:
   - {fileID: 11424226, guid: b1ebf71c43c4bef4ab15fe21445f9b8c, type: 2}

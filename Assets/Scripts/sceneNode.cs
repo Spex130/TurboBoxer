@@ -13,6 +13,9 @@ public class sceneNode : MonoBehaviour {
     public enum camProjection { ortho, persp}
     public camProjection camPro;
 
+    public bool isTrueLoad = false; //Use this if we want to load a UnityScene instead of a sceneNode.
+    public string sceneLoadName;
+
     //public GameObject
 
     public sceneNode[] nextNodeArray;
@@ -34,26 +37,33 @@ public class sceneNode : MonoBehaviour {
 
     public void activateNextNode(int id)
     {
-        sceneNode temp = GameObject.Instantiate<sceneNode>(nextNodeArray[id]);
-        temp.transform.position = new Vector3(0, 0, 0);
-        Player player = GameObject.FindObjectOfType<Player>();
-        player.transform.position = temp.playerPos.transform.position;
-        player.transform.rotation = temp.playerPos.transform.rotation;
-
-        cam = GameObject.FindObjectOfType<Camera>();
-        cam.transform.position = temp.camPos.transform.position;
-        cam.transform.rotation = temp.camPos.transform.rotation;
-
-        if(camPro == camProjection.ortho)
+        if (!isTrueLoad)
         {
-            cam.orthographic = false;
+            sceneNode temp = GameObject.Instantiate<sceneNode>(nextNodeArray[id]);
+            temp.transform.position = new Vector3(0, 0, 0);
+            Player player = GameObject.FindObjectOfType<Player>();
+            player.transform.position = temp.playerPos.transform.position;
+            player.transform.rotation = temp.playerPos.transform.rotation;
+
+            cam = GameObject.FindObjectOfType<Camera>();
+            cam.transform.position = temp.camPos.transform.position;
+            cam.transform.rotation = temp.camPos.transform.rotation;
+
+            if (camPro == camProjection.ortho)
+            {
+                cam.orthographic = false;
+            }
+            else
+            {
+                cam.orthographic = true;
+            }
+
+            //cam.ResetProjectionMatrix();
+            Destroy(this.gameObject);
         }
         else
         {
-            cam.orthographic = true;
+            UnityEngine.SceneManagement.SceneManager.LoadScene(sceneLoadName);
         }
-
-        //cam.ResetProjectionMatrix();
-        Destroy(this.gameObject);
     }
 }

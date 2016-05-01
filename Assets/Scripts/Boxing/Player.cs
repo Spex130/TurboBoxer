@@ -8,19 +8,27 @@ namespace Assets.Scripts.Boxing
         public int tiltRep;//This allows other things to find whether or not you are tilting in a specific direction.
         public bool isMale = true;// ARE YOU A BOY OR A GIRL??? /Oak
 
+        public bool shouldWait = false;
+
         void Start()
         {
             init();
         }
 
-        //[SerializeField]private State state;
-        void Update()
+
+        void FixedUpdate()
         {
             if (state == State.pushup)
             {
 
             }
             else {
+                if (shouldWait)
+                {
+                    clearAnim();
+                    anim.SetBool("Wait", true);
+                    shouldWait = false;
+                }
                 if ((actionSpeed += Time.deltaTime) < actionSpeedLimit)
                     return;
                 if (hit)
@@ -53,6 +61,7 @@ namespace Assets.Scripts.Boxing
 
                     if (Util.CustomInput.BoolFreshPress(Util.CustomInput.UserInput.Action))
                     {
+                        print("punch");
                         if (Attack())
                             points++;
                         if (enemy.health <= 0)
@@ -104,6 +113,7 @@ namespace Assets.Scripts.Boxing
             clearAnim();
             state = State.middle;
             anim.SetBool("Wait", true);
+            //shouldWait = true;
         }
 
         public void clearAnimations()
@@ -118,6 +128,7 @@ namespace Assets.Scripts.Boxing
 
         public void init()
         {
+            
             state = State.middle;
             clearAnim();
             anim.SetBool("Wait", true);

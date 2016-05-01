@@ -23,6 +23,7 @@ public class fightSceneNode : MonoBehaviour {
 
     public bool allowEnd = false;
     public Text proceedText;
+    private Animator anim;
 
     // Use this for initialization
     void Start () {
@@ -31,7 +32,7 @@ public class fightSceneNode : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
         gameLoop();
 	}
 
@@ -45,10 +46,12 @@ public class fightSceneNode : MonoBehaviour {
 
         //player related
         player = GameObject.FindObjectOfType<Player>();
+        
         player.clearAnimations();
+        player.startWaiting();
         player.init();
         player.canMove = false;
-
+        anim = player.GetComponent<Animator>();
 
         fightAnim = GetComponent<Animator>();
 
@@ -56,6 +59,8 @@ public class fightSceneNode : MonoBehaviour {
         if (player.isMale)
         {
             maleFighter = GameObject.Instantiate<CPU>(maleFighter);
+            maleFighter.init();
+            maleFighter.transform.parent = this.transform;
             player.findEnemy();
             maleFighter.transform.position = enemyPos.transform.position;
             maleFighter.transform.rotation = enemyPos.transform.rotation;
@@ -67,6 +72,8 @@ public class fightSceneNode : MonoBehaviour {
         else
         {
             femaleFighter = GameObject.Instantiate<CPU>(femaleFighter);
+            femaleFighter.init();
+            femaleFighter.transform.parent = this.transform;
             player.findEnemy();
             femaleFighter.transform.position = enemyPos.transform.position;
             femaleFighter.transform.rotation = enemyPos.transform.rotation;
@@ -78,17 +85,17 @@ public class fightSceneNode : MonoBehaviour {
 
         pMan.round++;
 
-        if(pMan.round > 3)
+        if(pMan.round >(int)(pMan.maxRounds*25))
         {
             initializedEnemy.dif = CPU.CPUDifficulty.medium;
         }
-        if (pMan.round > 7)
+        if (pMan.round > (int)(pMan.maxRounds*.75))
         {
             initializedEnemy.dif = CPU.CPUDifficulty.hard;
         }
 
         player.findEnemy();
-
+        anim.SetBool("Wait", true);
 
 
     }
@@ -105,7 +112,7 @@ public class fightSceneNode : MonoBehaviour {
             case fightGameState.start:
                 break;
             case fightGameState.play:
-                if(player.health <=0 || initializedEnemy.health <= 0)
+                if(player.health <=0 || femaleFighter.health <= 0 || maleFighter.health <= 0)
                 {
                     switchState(fightGameState.end);
                 }
@@ -115,13 +122,14 @@ public class fightSceneNode : MonoBehaviour {
                 {
                     if (allowEnd)
                     {
-                        if (pMan.round < 10)
+                        if (pMan.round < pMan.maxRounds)
                         {
                             fSceneNode.activateNextNode(0);
                         }
                         else
                         {
                             //YOU WON THE GAME. CONG-RATIONS. *Clap clap clap*
+                            fSceneNode.isTrueLoad = true;
                             fSceneNode.activateNextNode(1);
                         }
                     }
@@ -135,20 +143,23 @@ public class fightSceneNode : MonoBehaviour {
     {
         fState = fgState;
 
-        switch (fState)
+        switch (fgState)
         {
             case fightGameState.start:
                 player.init();
+                player.startPushup();
                 player.startWaiting();
                 break;
             case fightGameState.play:
-                player.startWaiting();
                 player.canMove = true;
-                initializedEnemy.canMove = true;
+                maleFighter.canMove = true;
+                femaleFighter.canMove = true;
+                player.clearAnimations();
                 break;
             case fightGameState.end:
                 player.canMove = false;
-                initializedEnemy.canMove = false;
+                maleFighter.canMove = false;
+                femaleFighter.canMove = false;
                 fightAnim.SetTrigger("Finish!");
                 break;
         }

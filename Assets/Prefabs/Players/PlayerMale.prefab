@@ -2871,11 +2871,12 @@ MonoBehaviour:
   anim: {fileID: 9508686}
   animDone: 0
   canMove: 1
-  actionSpeedLimit: 0.3
+  actionSpeedLimit: 0.4
   state: 0
   health: 15
   tiltRep: 0
   isMale: 1
+  shouldWait: 0
 --- !u!137 &13701892
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

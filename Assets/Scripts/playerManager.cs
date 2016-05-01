@@ -7,6 +7,7 @@ public class playerManager : MonoBehaviour {
 
     public int score = 0;
     public int round = 0;
+    public int maxRounds = 7;
 
 	// Use this for initialization
 	void Start () {

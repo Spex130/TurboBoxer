@@ -10,7 +10,7 @@ namespace Assets.Scripts.Boxing
     {
         public Camera cam;
         private sceneNode pmSceneNode;
-
+        public playerManager pMan;
 
         public enum pushupGameState { start, play, end}
         public pushupGameState gState = pushupGameState.start;
@@ -54,6 +54,7 @@ namespace Assets.Scripts.Boxing
         // Use this for initialization
         void Start()
         {
+            pMan = GameObject.FindObjectOfType<playerManager>();
             pmSceneNode = GetComponent<sceneNode>();
             minigameTimerReset = minigameTimer;
             init();
@@ -61,7 +62,11 @@ namespace Assets.Scripts.Boxing
 
         public void init()
         {
+            //Fix the camera's nonsense.
             cam = GameObject.FindObjectOfType<Camera>();
+            cam.orthographic = false;
+
+
             player = GameObject.FindObjectOfType<Player>();
             timerReset = timer;
             minigameTimer = minigameTimerReset;
@@ -108,7 +113,7 @@ namespace Assets.Scripts.Boxing
                 case pushupGameState.play:
                     if (minigameTimer > 0)
                     {
-                        player.startPushup();
+                        //player.startPushup();
                         timer -= Time.deltaTime * pushupSpeed;
                         if (timer <= 0)
                         {
@@ -155,7 +160,7 @@ namespace Assets.Scripts.Boxing
         }
 
         // Update is called once per frame
-        void Update()
+        void FixedUpdate()
         {
             gameLoop();
             
@@ -174,6 +179,7 @@ namespace Assets.Scripts.Boxing
                         {
                             textSprite hit = GameObject.Instantiate<textSprite>(hitSprite);
                             hit.transform.position = effectsPoint.transform.position;
+                                score++;
                             inverter *= -1;//Reverse Direction
                             pushupSpeed *= 1.2f;//speed up
                             pushupSuccess = true;//Prevent spam
@@ -206,6 +212,8 @@ namespace Assets.Scripts.Boxing
                         if (allowEnd)
                         {
                             player.init();
+                            player.actionSpeedLimit -= (float)(score * .002);
+                            anim.SetBool("AllowInterrupt", false);
                             pmSceneNode.activateNextNode(0);
                         }
                     }

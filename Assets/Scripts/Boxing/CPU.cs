@@ -93,5 +93,10 @@ namespace Assets.Scripts.Boxing
         {
             enemy = GameObject.FindObjectOfType<Player>();
         }
+
+        public void init()
+        {
+            reinit();
+        }
     }
 }
