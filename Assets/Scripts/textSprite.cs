@@ -19,7 +19,7 @@ public class textSprite : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+        this.transform.LookAt(cam.transform);
         transparencyValue -= invisDrainSpeed;
         transform.Translate(0, moveSpeed, 0);
 

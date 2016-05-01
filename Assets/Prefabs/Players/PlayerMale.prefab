@@ -2817,24 +2817,31 @@ MonoBehaviour:
   bodyMats:
   - {fileID: 2100000, guid: 40a80d08b60836c48a2a440aa5cd893e, type: 2}
   - {fileID: 2100000, guid: 0a2042921fc0aa742b6ba19a12dd91f4, type: 2}
+  - {fileID: 2100000, guid: c14d9921146f0034f859207b78183ca6, type: 2}
   clotheMats:
   - {fileID: 2100000, guid: cdc7cdbc5c3612d478f544fc6c38bc3f, type: 2}
   - {fileID: 2100000, guid: 9f49e33e2dcbe084f87e4cdfd0c8aa26, type: 2}
   - {fileID: 2100000, guid: 212f41286eb1d3f4687e64a3b4337416, type: 2}
   - {fileID: 2100000, guid: 100a9e99f2125434f8507a9bd657c3e3, type: 2}
   - {fileID: 2100000, guid: ae385cf5cef757142b1e15e36f332645, type: 2}
+  - {fileID: 2100000, guid: 1d7fd2b7f44c6d744a6d40a54a6d8eb2, type: 2}
+  - {fileID: 2100000, guid: 54c4360ea674e7446bc24dc60949d99f, type: 2}
   gloveMats:
   - {fileID: 2100000, guid: 5e44ece9a0c74f14cb1219224b353965, type: 2}
   - {fileID: 2100000, guid: fee13f45403c29a4d812aacbe59f6867, type: 2}
   - {fileID: 2100000, guid: acdffb3aeddaa7b40ba93c383f1118c4, type: 2}
   - {fileID: 2100000, guid: 34a66c4810746044bad1e1b39c409965, type: 2}
   - {fileID: 2100000, guid: d2f5ea95b0f05e84ab2d6fd6b7be7ae2, type: 2}
+  - {fileID: 2100000, guid: 9bef4b5ffb0f5124dab055e1a5fbfdd0, type: 2}
+  - {fileID: 2100000, guid: 8679e579107f46e4e9c67b9442245e5a, type: 2}
   bootMats:
   - {fileID: 2100000, guid: 96b53db719a9d6540934d9cc5b629975, type: 2}
   - {fileID: 2100000, guid: 607208b0747ac174595c7923d9ab692a, type: 2}
   - {fileID: 2100000, guid: 6ef63f5cb36a51241a482ca91a66b6a4, type: 2}
   - {fileID: 2100000, guid: 63d5794bcb31bc549b2d53b51f5a9ede, type: 2}
   - {fileID: 2100000, guid: 971536981cbc9c341847a2d950e4f303, type: 2}
+  - {fileID: 2100000, guid: c30bd206326a0ee489bb4eceb16ae235, type: 2}
+  - {fileID: 2100000, guid: 5153d66cd3ef9da49b084972ef01c120, type: 2}
   bodys:
   - {fileID: 112218}
   - {fileID: 161300}
@@ -2863,7 +2870,12 @@ MonoBehaviour:
   enemy: {fileID: 0}
   anim: {fileID: 9508686}
   animDone: 0
+  canMove: 1
   actionSpeedLimit: 0.3
+  state: 0
+  health: 15
+  tiltRep: 0
+  isMale: 1
 --- !u!137 &13701892
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

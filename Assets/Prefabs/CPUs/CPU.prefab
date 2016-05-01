@@ -726,7 +726,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &149002
 GameObject:
   m_ObjectHideFlags: 1
@@ -2817,7 +2817,14 @@ MonoBehaviour:
   enemy: {fileID: 0}
   anim: {fileID: 9506770}
   animDone: 0
+  canMove: 1
   actionSpeedLimit: 1
+  health: 15
+  dif: 0
+  attackTimer: 4
+  attackSpeed: 0.1
+  stateSwitchTimer: 0
+  tiltRep: 0
 --- !u!114 &11423796
 MonoBehaviour:
   m_ObjectHideFlags: 1

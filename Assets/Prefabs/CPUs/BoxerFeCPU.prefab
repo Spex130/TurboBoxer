@@ -1563,7 +1563,14 @@ MonoBehaviour:
   enemy: {fileID: 0}
   anim: {fileID: 9501526}
   animDone: 0
+  canMove: 1
   actionSpeedLimit: 1
+  health: 15
+  dif: 0
+  attackTimer: 4
+  attackSpeed: 0.1
+  stateSwitchTimer: 0
+  tiltRep: 0
 --- !u!137 &13717364
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

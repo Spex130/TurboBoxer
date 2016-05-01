@@ -75,7 +75,7 @@ namespace Assets.Scripts.UI
 
         public void Play()
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene("NormalScene");
+            UnityEngine.SceneManagement.SceneManager.LoadScene("NodeLoadScene");
         }
     }
 }

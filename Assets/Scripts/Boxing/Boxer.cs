@@ -7,13 +7,23 @@ namespace Assets.Scripts.Boxing
         public Boxer enemy;
         public Animator anim;
         public bool animDone;
+        public bool canMove = true;//This controls whether or not the player can interact.
         public float actionSpeedLimit = 1;
         protected float actionSpeed = 1;
 
-        protected enum State { middle, left, right };
-        protected State state;
+        protected enum State { middle, left, right, dead, pushup };
+        [SerializeField]protected State state;
         protected bool hit;
         protected bool blocking;
+
+        public int health = 15;
+
+        protected void reinit()
+        {
+            anim.SetBool("Wait", true);
+            clearAnim();
+            health = 15;
+        }
 
         protected void clearAnim()
         {
@@ -25,62 +35,79 @@ namespace Assets.Scripts.Boxing
             anim.SetBool("LeftPunchHi", false);
             anim.SetBool("RightPunchHi", false);
             anim.SetBool("Wait", false);
+            hit = false;
             animDone = true;
         }
 
         protected bool Attack()
         {
-            if (state == State.left) {
-                anim.SetBool("LeftPunchHi", true);
-                actionSpeed = 0;
-            }
-            else if (state == State.middle) {
-                if (Random.Range(1, 10)%2 == 0) //IF random number is even.
-                {
-                    anim.SetBool("LeftPunchLow", true);
-                    actionSpeed = 0;
-                }
-                else
-                {
-                    anim.SetBool("RightPunchLow", true);
-                    actionSpeed = 0;
-                }
-            }
-            else { 
-                anim.SetBool("RightPunchHi", true);
-                actionSpeed = 0;
-            }
-            if (enemy.blocking && state == State.middle)
-                return false;
-            if (state == enemy.state)
+            if (canMove)
             {
-                enemy.Hit();
-                return true;
+                if (state == State.left)
+                {
+                    anim.SetBool("LeftPunchHi", true);
+                    actionSpeed = 0;
+                }
+                else if (state == State.middle)
+                {
+                    if (Random.Range(1, 10) % 2 == 0) //IF random number is even.
+                    {
+                        anim.SetBool("LeftPunchLow", true);
+                        actionSpeed = 0;
+                    }
+                    else
+                    {
+                        anim.SetBool("RightPunchLow", true);
+                        actionSpeed = 0;
+                    }
+                }
+                else {
+                    anim.SetBool("RightPunchHi", true);
+                    actionSpeed = 0;
+                }
+                if (enemy.blocking && state == State.middle)
+                    return false;
+                if (state == enemy.state)
+                {
+                    enemy.Hit();
+                    return true;
+                }
+                enemy.Dodge(state);
             }
-            enemy.Dodge(state);
             return false;
         }
 
         protected void Hit()
         {
-            hit = true;
-            anim.SetBool("Hit", true);
-            actionSpeed = 0;
+            if (canMove)
+            {
+                hit = true;
+                anim.SetBool("Hit", true);
+                actionSpeed = 0;
+                health--;
+                if (health <= 0) { state = State.dead; canMove = false; }
+            }
         }
 
         protected void Block()
         {
-            anim.SetBool("BlockHit", true);
-            actionSpeed = 0;
+            if (canMove)
+            {
+                anim.SetBool("BlockHit", true);
+                actionSpeed = 0;
+            }
         }
 
         protected void Dodge(State state)
         {
-            if (state == State.left)
-                anim.SetBool("DodgeLeft", true);
-            else
-                anim.SetBool("DodgeRight", true);
-            actionSpeed = 0;
+            if (canMove)
+            {
+                if (state == State.left)
+                    anim.SetBool("DodgeLeft", true);
+                else
+                    anim.SetBool("DodgeRight", true);
+                actionSpeed = 0;
+            }
         }
     }
 }
